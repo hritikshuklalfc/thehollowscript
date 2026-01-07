@@ -1,0 +1,116 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,500&family=Special+Elite&display=swap");
+
+:root {
+  --paper: #f4f1ea; /* Warm, aged paper */
+  --ink: #1a1a1a; /* Charcoal, not true black */
+  --faded-ink: #5c5c5c; /* Pencil grey */
+  --blood-dry: #8a2c2c; /* Deep red accent */
+  --margin-line: #e0dcd3; /* Subtle notebook line */
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* This adds the paper texture */
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* The invisible container */
+.canvas {
+  max-width: 700px;
+  margin: 8vh auto; /* Asymmetrical vertical spacing */
+  padding: 0 40px;
+  position: relative;
+}
+
+/* Typography Hierarchy */
+h1 {
+  font-family: "Cinzel", serif; /* Engraved look */
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--faded-ink);
+  margin-top: -10px;
+  margin-bottom: 50px;
+}
+
+/* The Poem Text - Looks Typewritten */
+.poem-content p {
+  font-family: "Special Elite", monospace; /* Typewriter font */
+  font-size: 1.1rem;
+  color: #2b2b2b;
+  margin-bottom: 2rem;
+  white-space: pre-line; /* Preserves author's breaks */
+  position: relative;
+}
+
+/* Interactive Elements (Links) */
+a {
+  text-decoration: none;
+  color: var(--ink);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+a:hover {
+  color: var(--blood-dry);
+  border-bottom: 1px solid var(--blood-dry);
+  transform: skewX(-10deg); /* Slight handwriting tilt */
+}
+
+/* Navigation Footer */
+.nav-footer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--margin-line);
+  padding-top: 20px;
+}
+
+/* Animations */
+.fade-in {
+  animation: simpleFade 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes simpleFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar customized to be invisible/minimal */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--faded-ink);
+}
