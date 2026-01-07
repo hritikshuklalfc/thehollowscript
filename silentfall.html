@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Silent Fall | The Hollow Script</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* The visual metaphor for falling */
+      .falling-text {
+        display: block;
+        margin-bottom: 40px; /* Large gaps */
+        opacity: 0;
+        animation: slowFall 2s ease forwards;
+      }
+
+      .falling-text:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .falling-text:nth-child(2) {
+        animation-delay: 1.5s;
+        margin-left: 20px;
+      }
+      .falling-text:nth-child(3) {
+        animation-delay: 3s;
+        margin-left: 40px;
+        color: var(--faded-ink);
+      }
+
+      @keyframes slowFall {
+        0% {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* The 'Label' - A rigid, constraining box */
+      .the-label {
+        display: inline-block;
+        border: 2px solid var(--ink);
+        padding: 2px 8px;
+        font-family: "Cinzel", serif;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--ink);
+        transform: rotate(-2deg); /* Imperfect stamp */
+        margin: 0 5px;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* The Vulnerable Ending */
+      .plea {
+        margin-top: 60px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.4rem;
+        font-style: italic;
+        color: var(--blood-dry);
+        border-left: 3px solid var(--blood-dry);
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas fade-in">
+      <h1>The Silent Fall</h1>
+      <h2>existence without audience</h2>
+
+      <div class="poem-content" style="margin-top: 60px">
+        <div class="falling-text">
+          In a forest where nobody sees, A tree falls in silence...
+        </div>
+        <div class="falling-text">No ears to catch the final scream...</div>
+        <div class="falling-text">
+          But does that make the existence of that fall invalid?
+        </div>
+
+        <p style="margin-top: 50px">
+          No. That no one is there to hear its cry does not make it invalid.
+          <br />
+          Its internal anguish still screams with its crying soul, <br />
+          its dying heart, its losing spirit...
+        </p>
+
+        <p>
+          So too, we fall where no one may know, <br />
+          And still within, our sorrow grows. <br />
+          Not every fall needs to be heard. Some truths exist without
+          validation,
+        </p>
+
+        <p style="margin-top: 40px; line-height: 2">
+          But the thing which hurts the most is the labeling—<br />
+          The label that makes a unique tree into just a
+          <span class="the-label">Generic</span> one...
+        </p>
+
+        <div class="plea">
+          Maybe the motive isn’t to be heard, but to be felt;<br />
+          To be comforted,<br />
+          to be loved,<br />
+          to be fought for.
+        </div>
+      </div>
+
+      <div class="nav-footer">
+        <a href="contents.html">index</a>
+        <a href="contents.html">close journal</a>
+      </div>
+    </div>
+  </body>
+</html>
