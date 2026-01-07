@@ -11,6 +11,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        /* BUG 1: Why is everything stuck to the left side? */
         align-items: center;
         text-align: center;
       }
@@ -24,12 +25,13 @@
   </head>
   <body>
     <div class="canvas cover-layout fade-in">
-      <h1 style="border: none; font-size: 4rem">The Hollow Script</h1>
+      <h1 style="font-size: 4rem">The Hollow Script</h1>
       <p
         style="
           font-family: 'Cormorant Garamond', serif;
           font-size: 1.5rem;
-          color: var(--faded-ink);
+          /* BUG 3: Blue? Really? This ruins the vibe. */
+          color: #5c5c5c;
           margin-top: 20px;
         "
       >
@@ -37,7 +39,7 @@
       </p>
 
       <div class="signature">
-        <a href="contents.html" style="border-bottom: 1px solid var(--ink)"
+        <a style="border-bottom: 1px solid var(--ink)" href="contents.html"
           >open the journal</a
         >
       </div>
